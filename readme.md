@@ -50,10 +50,13 @@
 ### 🏗️ مثال برمجي:
 
 ```js
-const allDays = ["الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"];
-const today = "الثلاثاء";
-const daysWithoutToday = allDays.filter(day => day !== today);
-const result = "اليوم ليس " + daysWithoutToday.join("، ولا ");
+async function todayisnot() {
+    startLoadingText();
+    let day = notday = await getday();
+    while (day == notday) {
+        notday = dayVariants[Math.floor(Math.random() * 7)]
+    }
+    stopLoadingText(notday);}
 ```
 
 ---
